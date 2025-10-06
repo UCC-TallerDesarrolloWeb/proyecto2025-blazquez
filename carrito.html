@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Carrito — Farmacia Rondeau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="localhost.js" defer></script>
+</head>
+<body>
+  <div id="app">
+
+   
+    <header class="topbar">
+      <div class="container">
+        <div class="logo img-placeholder" role="img" aria-label="logo farmacia">
+          <img src="Imagenes/logo farmacia.png" alt="logo-farmacia">
+        </div>
+
+        <h1 class="site-title">Farmacia Rondeau</h1>
+
+        <form class="buscador" action="#" role="search" aria-label="buscador">
+          <label for="q" class="sr-only">buscar productos</label>
+          <input id="q" type="search" placeholder="Buscador" />
+          <button type="submit" class="btn busqueda" aria-label="buscar">🔎</button>
+        </form>
+
+        <a href="carrito.html"><button class="pill" type="button" aria-label="carrito">
+          <span class="img-placeholder">
+            <img src="Imagenes/icono-carrito.png" alt="icono-carrito">
+          </span>
+        </button></a>
+
+        <a href="main.html"><button class="pill" type="button" aria-label="main"><h4>Main</h4></button></a>
+      </div>
+    </header>
+
+ 
+    <nav class="nav-categorias" aria-label="atajos para productos">
+      <div class="segmented">
+        <a class="nav-cat" data-cat="Bebes"        href="lista_de_productos.html?cat=Bebes">Bebes</a>
+        <a class="nav-cat" data-cat="Belleza"      href="lista_de_productos.html?cat=Belleza">Belleza</a>
+        <a class="nav-cat" data-cat="Medicamentos" href="lista_de_productos.html?cat=Medicamentos">Medicamentos</a>
+        <a class="nav-cat" data-cat="Vitaminas"    href="lista_de_productos.html?cat=Vitaminas">Vitaminas</a>
+        <a class="nav-cat" data-cat="Pelo"         href="lista_de_productos.html?cat=Pelo">Pelo</a>
+        <a class="nav-cat" data-cat="Higiene"      href="lista_de_productos.html?cat=Higiene">Higiene</a>
+      </div>
+    </nav>
+
+ 
+    <main class="container carrito-wrap">
+      <div class="carrito-controls">
+        <button id="btn-vaciar" class="btn-danger btn-pill-grande" type="button">BORRAR TODO</button>
+      </div>
+
+      <section id="carrito-grid" class="carrito-grid" aria-live="polite"></section>
+
+      <div class="total-box">
+        <span>Total:</span> <strong id="carrito-total">$ 0</strong>
+      </div>
+    </main>
+
+
+    <dialog id="detalle" class="modal-detalle">
+      <article class="detalle-card">
+        <button class="cerrar" onclick="document.getElementById('detalle').close()" aria-label="cerrar">✕</button>
+        <h3 id="detalle-nombre"></h3>
+        <img id="detalle-img" alt="" />
+        <p id="descr-prod"></p>
+      </article>
+    </dialog>
+
+
+    <footer class="pie">
+      <div class="container pie-grid">
+        <div class="icono-grande img-placeholder" role="img" aria-label="maps">
+          <a href="https://www.google.com.ar/maps/place/Farmacia+Rondeau/">
+            <img src="Imagenes/icono-maps.png" alt="link-maps">
+          </a>
+        </div>
+
+        <div class="footer-bloque">
+          <p>lunes a viernes:<br>8:00 – 13:00 / 16:00 – 21:00<br>sábados: 8:00 – 13:00</p>
+        </div>
+
+        <div class="footer-bloque">
+          <h4>teléfono fijo</h4>
+          <p>(0351) 475-7893</p>
+        </div>
+
+        <div class="footer-bloque">
+          <h4>numero de whatsapp</h4>
+          <p>+54 9 351 672 7124</p>
+        </div>
+
+        <div class="iconos-redes">
+          <div class="icono img-placeholder" role="img" aria-label="instagram">
+            <a href="https://www.instagram.com/"><img src="Imagenes/icono-ig.webp" alt="instagram-link"></a>
+          </div>
+          <div class="icono img-placeholder" role="img" aria-label="whatsapp">
+            <a href="https://www.whatsapp.com/?lang=es_LA"><img src="Imagenes/whatshap icono.webp" alt="whatsapp-link"></a>
+          </div>
+          <div class="icono img-placeholder" role="img" aria-label="facebook">
+            <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr#"><img src="Imagenes/icono-facebook.webp" alt="facebook link"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Catálogo — Farmacia Rondeau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="localhost.js" defer></script>
+</head>
+<body>
+  <div id="app">
+
+
+    <header class="topbar">
+      <div class="container">
+        <div class="logo img-placeholder" role="img" aria-label="logo farmacia">
+          <img src="Imagenes/logo farmacia.png" alt="logo-farmacia">
+        </div>
+
+        <h1 class="site-title">Farmacia Rondeau</h1>
+
+        <form class="buscador" action="#" role="search" aria-label="buscador">
+          <label for="q" class="sr-only">buscar productos</label>
+          <input id="q" type="search" placeholder="Buscador" />
+          <button type="submit" class="btn busqueda" aria-label="buscar">🔎</button>
+        </form>
+
+        <a href="carrito.html"><button class="pill" type="button" aria-label="carrito">
+          <span class="img-placeholder">
+            <img src="Imagenes/icono-carrito.png" alt="icono-carrito">
+          </span>
+        </button></a>
+
+        <a href="main.html"><button class="pill" type="button" aria-label="main"><h4>Main</h4></button></a>
+      </div>
+    </header>
+
+    <nav class="nav-categorias" aria-label="atajos para productos">
+      <div class="segmented">
+        <a href="#cat-bebes" data-cat="Bebes" class="nav-cat">Bebes</a>
+        <a href="#cat-belleza" data-cat="Belleza" class="nav-cat">Belleza</a>
+        <a href="#cat-medicamentos" data-cat="Medicamentos" class="nav-cat">Medicamentos</a>
+        <a href="#cat-vitaminas" data-cat="Vitaminas" class="nav-cat">Vitaminas</a>
+        <a href="#cat-pelo" data-cat="Pelo" class="nav-cat">Pelo</a>
+        <a href="#cat-higiene" data-cat="Higiene" class="nav-cat">Higiene</a>
+      </div>
+    </nav>
+
+
+    <main class="container tienda">
+
+      <aside class="filtros panel">
+        <h3 class="titulo-filtros">FILTROS</h3>
+
+        <div class="bloque-filtro">
+          <label for="search" class="lbl">Nombre</label>
+          <input type="text" id="search" class="inp" placeholder="BUSCAR">
+        </div>
+
+        <div class="bloque-filtro">
+          <div class="lbl">Precio</div>
+          <div class="grid-precio">
+            <label class="mini">Mínimo:</label>
+            <input type="number" id="price-min" class="inp-minmax" min="0" step="1000" placeholder="0">
+            <label class="mini">Máximo:</label>
+            <input type="number" id="price-max" class="inp-minmax" min="0" step="1000" placeholder="100000">
+          </div>
+        </div>
+
+        <div class="bloque-filtro">
+          <div class="lbl">Categoria</div>
+          <ul class="lista-cats">
+            <li><label><input type="checkbox" name="cats" value="Bebes"> Bebes</label></li>
+            <li><label><input type="checkbox" name="cats" value="Belleza"> Belleza</label></li>
+            <li><label><input type="checkbox" name="cats" value="Medicamentos"> Medicamentos</label></li>
+            <li><label><input type="checkbox" name="cats" value="Vitaminas"> Vitaminas</label></li>
+            <li><label><input type="checkbox" name="cats" value="Pelo"> Pelo</label></li>
+            <li><label><input type="checkbox" name="cats" value="Higiene"> Higiene</label></li>
+          </ul>
+        </div>
+
+        <div class="acciones-filtro">
+          <button id="btn-limpiar" class="btn-sec">Limpiar filtros</button>
+        </div>
+      </aside>
+
+
+      <section class="catalogo" id="catalogo" aria-live="polite"></section>
+    </main>
+
+
+    <dialog id="detalle" class="modal-detalle">
+      <article class="detalle-card">
+        <button class="cerrar" onclick="document.getElementById('detalle').close()" aria-label="cerrar">✕</button>
+        <h3 id="detalle-nombre"></h3>
+        <img id="detalle-img" alt="" />
+        <p id="descr-prod"></p>
+      </article>
+    </dialog>
+
+   <footer class="pie">
+      <div class="container pie-grid">
+        <div class="icono-grande img-placeholder" role="img" aria-label="maps">
+          <a href="https://www.google.com.ar/maps/place/Farmacia+Rondeau/">
+            <img src="Imagenes/icono-maps.png" alt="link-maps">
+          </a>
+        </div>
+
+        <div class="footer-bloque">
+          <p>lunes a viernes:<br>8:00 – 13:00 / 16:00 – 21:00<br>sábados: 8:00 – 13:00</p>
+        </div>
+
+        <div class="footer-bloque">
+          <h4>teléfono fijo</h4>
+          <p>(0351) 475-7893</p>
+        </div>
+
+        <div class="footer-bloque">
+          <h4>numero de whatsapp</h4>
+          <p>+54 9 351 672 7124</p>
+        </div>
+
+        <div class="iconos-redes">
+          <div class="icono img-placeholder" role="img" aria-label="instagram">
+            <a href="https://www.instagram.com/"><img src="Imagenes/icono-ig.webp" alt="instagram-link"></a>
+          </div>
+          <div class="icono img-placeholder" role="img" aria-label="whatsapp">
+            <a href="https://www.whatsapp.com/?lang=es_LA"><img src="Imagenes/whatshap icono.webp" alt="whatsapp-link"></a>
+          </div>
+          <div class="icono img-placeholder" role="img" aria-label="facebook">
+            <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr#"><img src="Imagenes/icono-facebook.webp" alt="facebook link"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  
+</body>
+</html>
