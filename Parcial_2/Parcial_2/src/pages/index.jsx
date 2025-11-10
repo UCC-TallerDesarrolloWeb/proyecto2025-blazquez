@@ -1,14 +1,12 @@
 import '@styles/index.css';
-import Footer from '@components/footer.jsx';
-import Header from '@components/header.jsx';
-import Navbar from '@components/navbar.jsx';
+
 
 
 export default function Main() {
   return (
     <>
-      <Header />
-      <Navbar />
+  
+
       
       <main className="contenido container">
         <section className="col izq">
@@ -69,7 +67,7 @@ export default function Main() {
         </section>
       </main>
 
-      <Footer />
+
     </>
   );
 }

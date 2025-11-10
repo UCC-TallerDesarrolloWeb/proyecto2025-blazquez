@@ -1,0 +1,102 @@
+/* ====== Resets útiles para layout ====== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+img { max-width: 100%; display: block; }
+
+/* Un contenedor centrado reusable */
+.container {
+  width: min(1200px, 100% - 32px);
+  margin-inline: auto;
+}
+
+/* ====== Layout tienda ====== */
+.tienda {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr); // aside + contenido
+  gap: 24px;
+  margin: 18px auto 28px;
+  align-items: start;
+}
+
+/* El panel de filtros no debe empujar nada raro */
+.filtros {
+  position: sticky; // se queda a la vista al scrollear
+  top: 16px;
+  align-self: start;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+/* ====== Grilla del catálogo ====== */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  min-width: 0; // evita overflow dentro del grid
+}
+
+/* ====== Card de producto ====== */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 0;   // IMPORTANTÍSIMO en grids
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;   // bloque estable
+  object-fit: contain;   // no deforma producto
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.card__title {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere; // permite corte sano
+  word-break: normal;      // evita “columna” de letras
+  hyphens: auto;
+}
+
+.card__desc {
+  color: #444;
+  font-size: .95rem;
+  line-height: 1.35;
+  // asegurá que no “reviente” la card
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     // 3 líneas
+  -webkit-box-orient: vertical;
+}
+
+.card__price {
+  margin-top: auto;  // empuja precio y acciones al fondo
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ====== Footer y padding del main ====== */
+main {
+  padding-block-end: 120px; // que el footer no tape nada
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 960px) {
+  .tienda { grid-template-columns: 1fr; }
+  .filtros { position: static; }
+}

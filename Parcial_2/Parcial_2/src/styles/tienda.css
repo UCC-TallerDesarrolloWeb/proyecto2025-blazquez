@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* ====== Resets útiles para layout ====== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Un contenedor centrado reusable */
+.container {
+  width: min(1200px, 100% - 32px);
+  margin-inline: auto;
+}
+
+/* ====== Layout tienda ====== */
+.tienda {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  margin: 18px auto 28px;
+  align-items: start;
+}
+
+/* El panel de filtros no debe empujar nada raro */
+.filtros {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+/* ====== Grilla del catálogo ====== */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  min-width: 0;
+}
+
+/* ====== Card de producto ====== */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.card__title {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.card__desc {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card__price {
+  margin-top: auto;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ====== Footer y padding del main ====== */
+main {
+  padding-block-end: 120px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 960px) {
+  .tienda {
+    grid-template-columns: 1fr;
+  }
+  .filtros {
+    position: static;
+  }
+}
+
+/*# sourceMappingURL=tienda.css.map */
