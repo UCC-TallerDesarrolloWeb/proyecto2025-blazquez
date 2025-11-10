@@ -1,0 +1,64 @@
+.pie {
+  background:#2e86c1;
+  color: #ffffff;
+}
+
+.pieGrid {
+  display: grid;
+  grid-template-columns: 14% 1fr 1fr 1fr auto;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 8px;
+  padding: 16px;
+}
+
+.footerBloque h4 {
+  margin: .2rem 0;
+  font-weight: 700;
+}
+
+.iconoGrande {
+  width: 90px;
+  height: 70px;
+  border-radius: 14px;
+}
+
+.iconosRedes {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 10px;
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.icono img,
+.iconoGrande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@media (max-width: 600px) {
+  .pieGrid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    text-align: center;
+  }
+
+
+  .pieGrid > div:nth-of-type(3),
+  .pieGrid > div:nth-of-type(4) {
+    display: none;
+  }
+
+  .iconoGrande,
+  .iconosRedes {
+    justify-self: center;
+  }
+}

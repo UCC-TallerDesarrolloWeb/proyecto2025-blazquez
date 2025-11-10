@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+.topbar {
+  width: 100%;
+  background: #2ecc71;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  border: 6px black;
+}
+
+.siteTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 6px 14px;
+  border: 2px solid #1e9e50;
+  gap: 10px;
+}
+
+.buscador .lupa {
+  font-size: 22px;
+  color: #1e9e50;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  width: 230px;
+}
+
+.btn {
+  background: #0095f6;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.pill {
+  background: #f6f6f6;
+  border: 1px solid #dcdcdc;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.pill:hover {
+  background: #ededed;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .topbar-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .siteTitle {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

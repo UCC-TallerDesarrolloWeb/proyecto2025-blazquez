@@ -1,0 +1,33 @@
+.nav-categorias {
+  width: 100%;
+  background: #2ecc71; 
+  border-top: 3px solid #2ecc71;
+  border-bottom: 3px solid #2ecc71;
+  display: flex;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.segmented {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.nav-cat {
+  padding: 8px 18px;
+  text-decoration: none;
+  background: #d9d9d9;
+  border-right: 2px solid black;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-cat:last-child {
+  border-right: none;
+}
+
+.nav-cat:hover {
+  background: #cfcfcf;
+}

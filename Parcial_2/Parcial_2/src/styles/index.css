@@ -1,0 +1,78 @@
+/* Global font */
+* {
+  font-family: "Dancing Script", cursive;
+}
+
+:root {
+  --color-borde: #e0e0e0;
+}
+
+.contenido {
+  display: grid;
+  grid-template-areas: "aside main";
+  grid-template-columns: 56% 44%;
+  gap: 20px;
+  margin: 18px auto;
+  background-color: #f4f0df;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.izq {
+  grid-area: aside;
+}
+
+.der {
+  grid-area: main;
+}
+
+/* paneles */
+.panel {
+  border: 5px solid #e0e0e0;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  background: #ffffff;
+}
+
+/* imagenes */
+.imgGrande,
+.imgMediana {
+  width: 100%;
+  align-self: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.imgGrande img,
+.imgMediana img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* obras sociales */
+.separacionDeOs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.os {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+/* responsive */
+@media screen and (max-width: 900px) {
+  .contenido {
+    grid-template-columns: 1fr;
+    grid-template-areas: "aside" "main";
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
