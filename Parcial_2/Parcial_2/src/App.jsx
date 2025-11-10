@@ -7,7 +7,7 @@ import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import Home from "@pages/index";
 import ListaDeProductos from "@pages/ListaDeProductos";
-
+import Carrito from "@pages/carrito";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -24,8 +24,9 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/lista_de_productos" element={<ListaDeProductos />} />
+          <Route path="/carrito" element={<Carrito/>} />
 
-          {/* Cualquier ruta desconocida vuelve al inicio */}
+
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
